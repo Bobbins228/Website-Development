@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+    <title>Kim Il-Kwon's Taekwon-Do</title>
+    <link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    <h1>Master Kim Il-Kwon's Taekwon-Do</h1>
+  </header>
+    <div class="ui five item menu">
+  <a class="item" href = "index.html">Home</a>
+  <a class="item" href = "about.html">About</a>
+  <a class="active item" href = "booking.html">Bookings</a>
+  <a class="item" href = "pictures.html">Pictures</a>
+  <a class="item" href = "dojos.html">Dojos</a>
+</div>
+<h2>Booking</h2>
+<p>You can book any of our dojos for activities just fill in the form here.</p>
+   <main class="thirteen wide column">
+<form action="process.html" method="get" id = "booking" class="ui form">
+<div class = "inline field">
+    <label for="name" class="two wide field">Name</label>
+    <input type="text" name="name" id="name" data-h5-errorid="invalid-name" class="four wide required field" autofocus required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" title = "Enter full name" >
+    <div id="invalid-name" class="ui-state-error"></div>
+</div>
+<div class = "inline field">
+    <label for="Telephone" class="two wide field">Telephone Number</label>
+    <input type="text" name="Telephone" id="Telephone" data-h5-errorid="invalid-telephone" class="four wide required field" required pattern = "^(\(\d{3}\)|\d{3})-?\d{6,9}$" title="Please Enter valid telephone no.">
+    <div id="invalid-telephone" class="ui-state-error"></div>
+</div>
+<div class = "inline field">
+    <label for="email" class="two wide field">Email Address</label>
+    <input type="email" name="email" id="email" data-h5-errorid="invalid-email" class="four wide required field" required pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" title="Please enter valid Email">
+    <div id="invalid-email" class="ui-state-error"></div>
+</div>
+<div class = "inline field">
+  <label for = "platform" class="two wide field">Which Dojo would you like to book?</label>
+<select name="platform" id="platform" class = "four wide required field" title="Please select a valid county.">
+<option value="D">Dublin</option>
+<option value="SE">Wexford</option>
+<option value="Mid">Cork</option>
+<option value="Cent">Tipperary</option>
+</select>
+</div>
+<div class = "inline field">
+  <label for="start_date" class="two wide field">What date would you like to book</label>
+<span class="ui calendar" id="eventdate">
+     <span class="ui input left icon">
+      <i class="calendar icon"></i>
+      <input type="text" placeholder="Date/Time" class="eight wide field">
+     </span>
+    </span>
+</div>
+<div>
+ Which of these times would you like to book?
+<br><input style="clear:left; float:left" type="radio" name="format" id = "morning" value="html"/> <label for = "morning" style="float:left"> 11:00-13:00</label>
+<br><input style="clear:left; float:left" type="radio" name="format" id = "afternoon" value="pdf"/><label for = "afternoon" style="float:left">14:00-17:00</label>
+<br><input style="clear:left; float:left" type="radio" name="format" id = "evening" value="pdf"/><label for = "evening" style="float:left"> 17:00-20:00</label>
+<br><input style="clear:left; float:left" type="radio" name="format" id = "entire_day" value="pdf"/><label for = "entire_day" style="float:left"> All Day</label>
+</div>
+<div>
+  <br><br>Would you like to recieve emails on exclusive offers and events?
+<br><input type="checkbox" name="yes" id="yes" value="mailing" style="clear:left;float:left">
+<label for = "yes" style="float:left">yes</label>
+<input type="checkbox" name="no" id="no" value="mailing" style="clear:left;float:left">
+<label for = "no" style="float:left">no</label>
+</div>
+<div class="inline field">
+  <button class = "ui button green" type="submit">Submit Booking</button>
+  <button class = "ui button red" type="reset">Clear the info</button>
+</div>
+</form>
+</main>
+    
+     <footer>
+      Master Kim Il-Kwon<br>
+      Telephone no: 555 958 4938<br>
+      Main dojo: Tallaght Dublin
+    </footer>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script>
+$(document).ready(function () {
+	$('form').h5Validate({errorClass:'validationError' });
+	let today = new Date();
+$("#eventdate").calendar({
+	type:'date',
+	startMode: 'year',
+	monthFirst: false,
+	 minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate()),
+  maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 365),
+formatter: {
+      date: function (date, settings) {
+      if (!date) return '';
+      let day = date.getDate();
+      let month = date.getMonth() + 1;
+      let year = date.getFullYear();
+      return day + '-' + month + '-' + year;
+   }}
+});
+
+});
+</script>
+  </body>
+  </html>

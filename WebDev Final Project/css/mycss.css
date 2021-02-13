@@ -1,0 +1,176 @@
+p
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:1.5em;
+}
+.header
+{
+	text-align:center;
+	font-size:2em;
+}
+h2
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:1.75em;
+}
+body
+{
+background-color: #F5F5DC;
+}
+
+a ,a:visited
+{
+	text-decoration: none;
+	color:red;
+}
+a:hover
+{
+	background-color: cyan;
+}
+
+header
+{
+   text-align: center;
+   font-size: 2em;
+
+}
+footer
+{
+	background-color: grey;
+	text-align:center;
+	width:15%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 1%;
+}
+hr
+{
+	height:.15em;
+	width:9.9em;
+	background-color:#F5F5DC;
+
+}
+.dojo
+{
+	display:block;
+	margin-left: auto;
+	margin-right: 25%;
+    width: 40%;
+}
+
+.picture
+{
+	margin-left:25%;
+}
+figure
+{
+	text-align: center;
+	display:inline-block;
+}
+
+figcaption
+{
+
+	text-align: center;
+	font-size: 2em;
+}
+caption
+{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	font-family:courier, arial, sans-serif;
+	font-size:2em;
+	font-weight:bold;
+}
+.ui.table thead th
+      {
+      background:#F05837;
+      color: white;
+      }
+
+    .ui.striped.table > tr:nth-child(2n),
+    .ui.striped.table tbody tr:nth-child(2n)
+    {
+      background-color:#F28A30;
+    }
+
+    .ui.selectable.table tbody tr:hover,
+    .ui.table tbody tr td.selectable:hover {
+      background-color:#F3E96B !important;
+    }
+.ui.menu
+{
+	background-color:#F3E96B;
+}
+.ui.menu .item
+{
+	color:white;
+}
+.ui.menu .active.item
+{
+	color:white;
+	background-color: red;
+}
+.ui.cards
+{
+	margin-left:25%;
+}
+#process
+{
+ margin-top: 3%;
+
+}
+main
+{
+	margin-left:35%;
+}
+.zoom {
+			display:inline-block;
+			position: relative;
+		}
+.zoom:after {
+			content:'';
+			display:block;
+			width:33px;
+			height:33px;
+			position:absolute;
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection { background-color: transparent; }
+		 #img img:hover { cursor: url(grab.cur), default; }
+		 #img img:active { cursor: url(grabbed.cur), default; }
+		 #img1 img:hover { cursor: url(grab.cur), default; }
+		 #img1 img:active { cursor: url(grabbed.cur), default; }
+		 #img2 img:hover { cursor: url(grab.cur), default; }
+		 #img2 img:active { cursor: url(grabbed.cur), default; }
+		 #img3 img:hover { cursor: url(grab.cur), default; }
+		 #img3 img:active { cursor: url(grabbed.cur), default; }
+
+.btn1{
+	background-color:cyan;
+	font-size: 0.85em;
+}
+
+.validationError {
+  color: white !important;
+  background-color:#FF4500 !important;
+}
+
+.ui-state-error {
+  font-size: 1.3em;
+  color: #FF4500;
+  font-weight: bold;
+  background-color:transparent;
+  border-color:transparent;
+  margin-left:9em;
+}

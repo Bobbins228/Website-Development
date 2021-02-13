@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+    <title>Kim Il-Kwon's Taekwon-Do</title>
+    <link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  	<h1>Master Kim Il-Kwon's Taekwon-Do</h1>
+  </header>
+  	<div class="ui five item menu">
+  <a class="item" href = "index.html">Home</a>
+  <a class="item" href = "about.html">About</a>
+  <a class="item" href = "booking.html">Bookings</a>
+  <a class="active item" href = "pictures.html">Pictures</a>
+  <a class="item" href = "dojos.html">Dojos</a>
+</div>
+<p>
+<div class = "ui container">
+<div class="ui cards">
+      <div>
+        <div class="ui centered card">
+  <div class="image">
+    <span class ="zoom" id = "img">
+    <img  src="images/student1.jpg" alt="our student" width="300" height="400">
+  </span>
+  </div>
+  <div class="content">
+    <span class="header">Our Student Alex Denby</span>
+</div>
+</div>
+</div>
+    
+      <div>
+        <div class="ui centered card">
+  <div class="image">
+    <span class ="zoom" id = "img1">
+    <img src="images/fight3.jpg" alt="fight" width="300" height="400">
+  </span>
+  </div>
+  <div class="content">
+    <span class="header">A sparring match</span>
+</div>
+</div>
+</div>
+
+  <div>
+        <div class="ui centered card">
+  <div class="image">
+    <span class = "zoom" id = "img2">
+    <img src="images/student2.jpg" alt="Red belt celebration" width="300" height="400">
+  </span>
+  </div>
+  <div class="content">
+    <span class="header">Ray Maxwell earning his red belt</span>
+</div>
+</div>
+</div>
+
+<div>
+        <div class="ui centered card">
+  <div class="image">
+    <span class = "zoom" id = "img3">
+    <img src="images/fight4.jpg" alt="training" width="300" height="400">
+  </span>
+  </div>
+  <div class="content">
+    <span class="header">Training Day</span>
+</div>
+</div>
+</div>
+
+ </div>
+</div>
+   
+   <footer>
+      Master Kim Il-Kwon<br>
+      Telephone no: 555 958 4938<br>
+      Main dojo: Tallaght Dublin
+    </footer>
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script src='js/jquery.zoom.js'></script>
+<script>
+$(document).ready(function(){
+      $('#img').zoom({on:'grab'});
+      $('#img1').zoom({on:'grab'});
+      $('#img2').zoom({on:'grab'});
+      $('#img3').zoom({on:'grab'});
+    });
+</script>
+  </body>
+  </html>

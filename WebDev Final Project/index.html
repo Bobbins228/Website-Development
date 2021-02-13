@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+    <title>Kim Il-Kwon's Taekwon-Do</title>
+    <link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  	<h1>Master Kim Il-Kwon's Taekwon-Do</h1>
+  </header>
+  	<div class="ui five item menu">
+  <a class="active item" href = "index.html">Home</a>
+  <a class="item" href = "about.html">About</a>
+  <a class="item" href = "booking.html">Bookings</a>
+  <a class="item" href = "pictures.html">Pictures</a>
+  <a class="item" href = "dojos.html">Dojos</a>
+</div>
+<div class="ui message">
+  <div class="header">
+    Events
+  </div>
+  <p>The Black Belt training day will be on the 26th of June.</p>
+</div>
+  	<h2>Welcome to Kim Il-Kwon's Taekwon-Do</h2>
+  	<p>
+  		Kim Il-Kwon's dojos provide its students with world-wide seminars,<br> championships, summer and winter training camps, and numerous other<br> national and international activities and events. Master Kim Il-Kwon,<br> president and founder of the organisation, has documented over sixty<br> instructional videos, authored thirteen best selling books, and other<br> educational material to enhance learning and broading the horizons of all<br> martial arts students. If learning Taekwon-Do at a dojo is not for<br> you then you can find many instructional videos <a id = "linked" class="link" href="https://www.youtube.com/channel/UCewQjBkTzw9E4zsKphfp1HA" target="_blank">here</a> <br>alternatively you can hit the change button to change the link to a <br>YouTube channel that features a variety of martial arts if even <br>Taekwon-Do is not your style.<br>
+      <button class = "btn1">Change</button>
+
+    <div class = "dojo">
+    <span class = "zoom" id = "img">
+    <img  src="images/dojo1.jpg" alt="Our Dojo" width="750" height="500">
+  </span>
+</div>
+</p>
+    <footer>
+    	Master Kim Il-Kwon<br>
+    	Telephone no: 555 958 4938<br>
+    	Main dojo: Tallaght Dublin
+    </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script src='js/jquery.zoom.js'></script>
+<script>
+$(document).ready(function(){
+      $('#img').zoom({on:'grab'});
+       $('button').on('click',function(){
+    $('#linked').attr('href', 'https://www.youtube.com/channel/UC2P_ez18uOCFlNpnZParZtw');
+  });
+    });
+</script>
+  </body>
+</html>

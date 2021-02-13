@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+    <title>Kim Il-Kwon's Taekwon-Do</title>
+    <link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    <h1>Master Kim Il-Kwon's Taekwon-Do</h1>
+  </header>
+    <div class="ui five item menu">
+  <a class="item" href = "index.html">Home</a>
+  <a class="active item" href = "about.html">About</a>
+  <a class="item" href = "booking.html">Bookings</a>
+  <a class="item" href = "pictures.html">Pictures</a>
+  <a class="item" href = "dojos.html">Dojos</a>
+</div>
+<h2>About</h2>
+<p>Master Kim Il-Kwon's Taekwon-Do was first established in 1987 and<br> hopes to teach people from the ages of 11 to 25 the art of Taekwon-Do,<br> Master Il-Kwon came up with the idea after helping some tourists<br> from a mugging on a walk home one night. He had the idea of setting up<br> a class where he can teach his skills so that people wouldn't be as defenceless.
+</p>
+<div class = "dojo">
+<img id = "image" src="images/dojo1.jpg" alt="Our Dojo" width="750" height="500">
+</div>
+<p>This is our dojo in Dublin and by far our most popular, hover the mouse over the <br>image to see the a picture of our champion match last year!</p>
+<p>The plugin I used is called jQuery zoom by Jack Moore and can be found <a class = "link" href="http://www.jacklmoore.com/zoom/">here</a><br> The plugin allows the website user to zoom into a picture by <br>hovering, dragging or clicking on the picture. I chose to use the grabbing function because it <br>looked nice with the grabbing icon and its can be annoying if the mouse automatically zooms <br>in if you hover over. The grab function gives the user a lot more contol. <br>I had to download two javascript files called jquery.zoom.js and jquery.zoom.min.js<br>The code I had to use included <span style = "color:blue;"><strong>$('#img').zoom({on:'grab'});</strong></span> I had run into a problem previously where <br>I had img, img1, img2, img3 all equate to the grab cursors but there was a bug so <br>I had to let them all equate individually.</p>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$(document).ready(function(){
+  	$('#image').on({
+    mouseenter: function(){
+    	$(this).attr('src', 'images/fight1.jpg')
+    },
+    mouseleave: function(){
+    	$(this).attr('src', 'images/dojo1.jpg');
+    }
+    });
+  });
+
+  	</script>
+<footer>
+      Master Kim Il-Kwon<br>
+      Telephone no: 555 958 4938<br>
+      Main dojo: Tallaght Dublin
+    </footer>
+</body>
+</html>

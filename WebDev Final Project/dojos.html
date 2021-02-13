@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  	<title>Kim Il-Kwon's Taekwon-Do</title>
+  	<link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  	<h1>Master Kim Il-Kwon's Taekwon-Do</h1>
+  </header>
+  <div class="ui five item menu">
+  <a class="item" href = "index.html">Home</a>
+  <a class="item" href = "about.html">About</a>
+  <a class="item" href = "booking.html">Bookings</a>
+  <a class="item" href = "pictures.html">Pictures</a>
+  <a class="active item" href = "dojos.html">Dojos</a>
+  </div>
+ 
+    
+    <div class = "ui container">
+   <script id="dojos" type="text/x-handlebars-template">
+<section>
+<table id = "table" class="ui striped selectable table" >
+<caption>You can find the various locations of our dojos here.</caption>
+<thead>
+<tr>
+<th>Dublin</th>
+<th>Wexford</th>
+<th>Cork</th>
+<th>Tipperary</th>
+</tr>
+</thead>
+<tbody>
+{{#each this}}
+<tr>
+<td>{{capitalise Dublin}}</td>
+<td>{{capitalise Wexford}}</td>
+<td>{{capitalise Cork}}</td>
+<td>{{capitalise Tipperary}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</section>
+</script>
+   
+<div id = "content-placeholder"></div>
+<p>You can add Towns you would like to feature our dojos</p>
+<button class="ui primary button" id="btn">Add Town</button>
+<div class="ui modal dojoModal">
+<i class="close icon"></i>
+<div class="header">
+<h1>Add Employee</h1>
+</div>
+
+<form name = 'dojoform' id = "dojoform" class = "ui form" >
+
+<div class="inline field">
+<label for = "Dublin" class="two wide field">Town for Dublin</label>
+<input type = "text" class="eight wide field" required  name="Dublin" id ="Dublin" title = "Please Enter a Town">
+</div>
+
+<div class="inline field">
+<label for = "Wexford" class="two wide field">Town for Wexford</label>
+<input type = "text" name="Wexford" id="Wexford" class="eight wide field" required title = "Please Enter a Town">
+</div>
+
+<div class="inline field">
+<label for = "Cork" class="two wide field">Town for Cork</label>
+<input type = "text" name="Cork" id="Cork" class="eight wide field" required   title = "Please Enter a Town">
+</div>
+
+<div class="inline field">
+<label for = "Tipperary" class="two wide field">Town for Tipperary</label>
+<input type = "text" name="Tipperary" id="Tipperary" class="eight wide field" required title = "Please Enter a Town">
+</div>
+
+
+
+<input type="submit" id="thesubmit" class="ui primary button" value="Add Town">
+
+</form>
+</div>
+</div>
+
+<footer>
+      Master Kim Il-Kwon<br>
+      Telephone no: 555 958 4938<br>
+      Main dojo: Tallaght Dublin
+    </footer>
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'></script>
+<script src="js/dojos.js"></script>
+<script>
+  
+</script>
+ </body>
+  </html>
